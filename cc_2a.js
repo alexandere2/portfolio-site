@@ -17,5 +17,5 @@ console.log ("Discounted Price: $" + discountedPrice);
 console.log ("Final Price with Tax: $" + finalPriceWithTax);
 console.log ("Profit Per Unit: $" + profitPerUnit);
 console.log ("Break-Even Units (Sneakers):" + breakEvenUnits);
-
 console.log (isProfitablePerUnit || 0);
+
