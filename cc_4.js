@@ -2,6 +2,7 @@
 
 // Code goes here
 
+// Made the arrays for the specific products 
 let products = [
             {name: "Bananas", category: "groceries", price: 7.00, inventory: 100.00},
             {name: "PS5 Controller", category: "electronics", price: 60.00, inventory: 40.00},
@@ -9,7 +10,7 @@ let products = [
             {name: "Laundry Detergent", category: "household", price: 15.00, inventory: 25.00},
             {name: "Chrome Heart Glasses", catgeory: "apparel", price: 500.00, inventory: 10.00}
 ];
-
+// Declared the specific discounts for each category 
 for (let p of products) {
     let discount = 0;
     switch (p.category) 
@@ -79,8 +80,8 @@ console.log(`Total after discounts: $${total.toFixed(2)}`);
 // Updated Inventory Stock
 products.forEach (products => console.log (
     `${products.name} | ${products.inventory} inv.`
-));
 
+// Log all product info after inventory is updated.
 for (const product of products) {
   console.log(`Product: ${product.name}`);
   for (const [key, value] of Object.entries(product)) {
