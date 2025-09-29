@@ -9,20 +9,21 @@ const employees = [
 // Calculating Base/Gross Pay
 
 function calculateBasePay (rate, hours) {
-    if (hours >= 40.00) {
-        return price 
-    } else 
-    {return 0}
+    const minimumHours = Math.min (hours, 40)
+    return hourlyRate * minimumHours
 }; 
+
+const basePay = calculateOvertimePay(employee.hourlyRate, employee.hoursWorked);
 
 // Calculating Overtime Pay 
 
 function calculateOvertimePay (rate, hours) {
-    if (hours > 40.00) {
+    if (hours >= 40.00) {
         return rate = 1.5 * hourlyRate
       }  else 
       {return 0}
 };
+const overtimePay = calculateOvertimePay(employee.hourlyRate, employee.hoursWorked);
 
 // Calculaying Gross Pay
 
@@ -34,19 +35,17 @@ function calculateTaxes(grossPay)
     const taxRate= 0.15 
     return grossPay * taxRate
 }
+const taxes = calculateTaxes(grossPay);
 {
-    return function (taxRate) {
-        return netPay = grossPa * (1-taxRate)
+    function calculateNetPay(taxRate {
+        return grossPay - taxes
     }
-
+const netPay = grossPay - taxes
 };
 
 // Process Payroll 
 function processPayroll(employee) {
-    const basePay = calculateBasePay (employee.rate, employee.hours);
-    const overtimePay = calculateOvertimePay (employee.rate, employee.hours);
-    const taxes = calculateTaxes(grossPay);
-    const netPay = grossPay - taxes
+  
     return {
         name: `${employee.name}`, 
         basePay: `$${employee.basePay}`, 
@@ -61,6 +60,7 @@ employees.forEach((employee) => {
     const payrollInformation = processPayroll(employee);
     console.log(payrollInformation);
 });
+
 
 
 
