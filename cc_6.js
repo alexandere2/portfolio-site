@@ -79,3 +79,25 @@ function listEmployees(employees) {
         console.log(employee.describe());
     });
 }
+
+const myCompany = new Company("Ground Beef Private Equity");
+
+function addStaff(employees) {
+    return myCompany.staff.push(employees)
+}
+
+function listStaff(employees) {
+    return myCompany.staff.forEach((employees) => {
+        console.log(employees.describe());
+    });
+}
+
+function addBosses(managers) {
+    return myCompany.bosses.push(managers)
+}
+
+function listBosses(managers) {
+    retur myCompany.bosses.forEach((managers) => {
+        console.log(managers.describe());
+    });
+}
